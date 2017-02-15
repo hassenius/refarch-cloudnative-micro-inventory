@@ -6,4 +6,4 @@ before_install:
 - mysql -e 'CREATE DATABASE IF NOT EXISTS inventorydb;'
 - cd inventory
  
- 
+script: ./gradlew build
