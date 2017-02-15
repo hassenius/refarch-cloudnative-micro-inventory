@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  *
  */
 @RestController("inventoryController")
-public class InventoryController {
+public class InventoryControllerImBreakingStuff {
 	
 	Logger logger =  LoggerFactory.getLogger(InventoryController.class);
 
