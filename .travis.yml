@@ -8,11 +8,13 @@ services:
 
 before_install: 
 - mysql -e 'CREATE DATABASE IF NOT EXISTS inventorydb;'
+- chmod +x ./mysql/scripts
 - chmod +x ./mysql/scripts/load-data.sh
-- ./mysql/scripts/load-data.sh
-- cd inventory
+- cd mysql/scripts
+- ./load-data.sh
+- cd ../../inventory
 - chmod +x gradle/wrapper/gradle-wrapper.jar
-- 
+ 
  
 script: 
 - gradlew build
