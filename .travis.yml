@@ -2,6 +2,8 @@ language: java
 services:
 - mysql
 
-before_install: mysql -e 'CREATE DATABASE IF NOT EXISTS inventorydb;'
+before_install: 
+- mysql -e 'CREATE DATABASE IF NOT EXISTS inventorydb;'
+- cd inventory
  
  
