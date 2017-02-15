@@ -4,10 +4,15 @@ jdk:
 
 services:
 - mysql
+- docker
 
 before_install: 
 - mysql -e 'CREATE DATABASE IF NOT EXISTS inventorydb;'
+- ./mysql/scripts/load-data.sh
 - cd inventory
 - chmod +x gradle/wrapper/gradle-wrapper.jar
+- 
  
-script: ./gradlew build
+script: 
+- gradlew build
+- gradlew docker
