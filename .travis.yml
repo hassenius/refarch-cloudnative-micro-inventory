@@ -19,5 +19,5 @@ before_install:
  
  
 script: 
-- gradlew build
-- gradlew docker
+- ./gradlew build
+- ./gradlew docker
